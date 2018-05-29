@@ -6,41 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Angular Social Posts Lab</title>
         <link href="stylesheet.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     </head>
     <body>
-        <div id="mainContainer">
-            
-
-            <input id="newThought" type="button" ng-click="newThought=true">
-
-            <div id="socialPostBox" ng-show="newThought" {{$ctrl.post.body}} {{$ctrl.post.title}} ></div>
-            <button class="button"ng-click= ng-model="ctrlnewSocialPosts" {{$ctrlnewSocialPosts}}>Click me to add posts!</button>
-            {{ctrl.add.newSocialPosts}}
-        </div>
        
-        <div
-        ng-class= "{completed: ctrl.completed}"             
-        ng-click="ctrl.toggleSelect(ctrl)">
-        {{ctrl.add}}
-        <input type="button" value="X" ng-model="ctrl.">     
-    <div> 
-
-
-        <div id="bottomContainer" ng-hide="bottomContainer" ng-click="bottomContainer= true"></div>
-            <h2>Title</h2>
-            <input type="text" ng-model="ctrlnewSocialPosts" id="inputBottomContainer" ng-submit="ctrl.add()">
-            <h2>Thought</h2>
-            <input type="text" id="newThought" ng-model="ctrlNewThought" ng-submit="ctrl.add()">
-            <div id="addPost" type= "button"></div>
-        </div>
-
-
-
-
-
-
-
-
+            
 
         <post></post>
         <post-form></post-form>

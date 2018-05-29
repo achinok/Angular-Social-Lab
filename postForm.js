@@ -1,21 +1,30 @@
-// "use strict"
-// {
+"use strict"
 
+{
+// when 
+    let postForm = {
+        bindings: {
+            posts: "<"
+        },
 
-    <div id="bottomContainer" ng-hide="bottomContainer" ng-click="bottomContainer= true"></div>
-    <h2>Title</h2>
-    <input type="text" ng-model="ctrlnewSocialPosts" id="inputBottomContainer" ng-submit="ctrl.add()">
-    <h2>Thought</h2>
-    <input type="text" id="newThought" ng-model="ctrlNewThought" ng-submit="ctrl.add()">
-    <div id="addPost" type= "button"></div>
-</div>
+        templateUrl: "socialPosts.html",
 
+        controller: function() {
+            let vm = this;
+            vm.PushNewPost = function(newTitle, newBody) {
+                let newPost = {
+                    title: newTitle,
+                    body: newBody
+                }
+                vm.posts.push(ctrl.newPost);
+                // push one thing at a time from posts in array of posts
+            }
 
+    }
+}
 
-
-
-
-//     angular
-//     .module("app")
-//     .component("postForm", postForm);
-// }
+    angular
+    .module("app")
+    .component("postForm", postForm);
+    
+}
